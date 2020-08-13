@@ -9,81 +9,44 @@
 </head>
 <body>
   <div class="container">
-    <div class="row"><!-- row 1 -->
-      <div class="col-6 even-grid-col-6">
-        <div class="card">
-          <h1>Addition Calculator</h1>
-          <form id="add">
-            <div class="form-group">
-              <label for="add1">1st number:</label>
-              <input id="add1" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-              <label for="add2">2nd number:</label>
-              <input id="add2" class="form-control" type="text">
-            </div>
-            <button type="submit" class="btn">Add!</button>
-          </form>
-          <div id="output-add">
-          </div>
-        </div>
+    <h1>Calculator</h1>
+    <form id="calculator">
+      <div class="form-group">
+        <label for="input1">1st number:</label>
+        <input id="input1" class="form-control" type="text">
       </div>
-      <div class="col-6 even-grid-col-6">
-        <div class="card">
-          <h1>Subtraction Calculator</h1>
-          <form id="sub">
-            <div class="form-group">
-              <label for="sub1">1st number:</label>
-              <input id="sub1" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-              <label for="sub2">2nd number:</label>
-              <input id="sub2" class="form-control" type="text">
-            </div>
-            <button type="submit" class="btn">Subtract!</button>
-          </form>
-          <div id="output-sub">
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="input2">2nd number:</label>
+        <input id="input2" class="form-control" type="text">
       </div>
-    </div>
-    <div class="row"> <!-- row 2 -->
-      <div class="col-6 even-grid-col-6">
-        <div class="card">
-          <h1>Multiplication Calculator</h1>
-          <form id="mul">
-            <div class="form-group">
-              <label for="mul1">1st number:</label>
-              <input id="mul1" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-              <label for="mul2">2nd number:</label> 
-              <input id="mul2" class="form-control" type="text">
-            </div>
-            <button type="submit" class="btn">Multiply!</button>
-          </form>
-          <div id="output-mul">
-          </div>
-        </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="add" checked>
+          add
+        </label>
       </div>
-      <div class="col-6 even-grid-col-6">
-        <div class="card">
-          <h1>Division Calculator</h1>
-          <form id="div">
-            <div class="form-group">
-              <label for="div">1st number:</label>
-              <input id="div1" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-              <label for="div2">2nd number:</label>
-              <input id="div2" class="form-control" type="text">
-            </div>
-            <button type="submit" class="btn">Divide!</button>
-          </form>
-          <div id="output-div">
-          </div>
-        </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="subtract">
+          subtract
+        </label>
       </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="multiply">
+          multiply
+        </label>
+      </div>        
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="divide">
+          divide
+        </label>
+      </div>        
+      <button type="submit" class="btn">Go!</button>
+    </form>
+    <div id="output">
+
     </div>
   </div>
 </body>

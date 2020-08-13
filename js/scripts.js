@@ -15,35 +15,12 @@ function div(number1, number2) {
 };
 
 $(document).ready(function() {
-  $("form#add").submit(function(event) {
+  $("form#calculator").submit(function() {
     event.preventDefault();
-    const number1 = parseInt($("#add1").val());
-    const number2 = parseInt($("#add2").val());
+    const number1 = parseInt($("#input1").val());
+    const number2 = parseInt($("#input2").val());
+    const operator = $("input:radio[name=operator]:checked").val();
     const result = add(number1, number2);
-    $("#output-add").text(result);
-  });
-  
-  $("form#sub").submit(function(event) {
-    event.preventDefault();
-    const number1 = parseInt($("#sub1").val());
-    const number2 = parseInt($("#sub2").val());
-    const result = sub(number1, number2);
-    $("#output-sub").text(result);
-  });
-
-  $("form#mul").submit(function(event) {
-    event.preventDefault();
-    const number1 = parseInt($("#mul1").val());
-    const number2 = parseInt($("#mul2").val());
-    const result = mul(number1, number2);
-    $("#output-mul").text(result);
-  });
-  
-  $("form#div").submit(function(event) {
-    event.preventDefault();
-    const number1 = parseInt($("#div1").val());
-    const number2 = parseInt($("#div2").val());
-    const result = div(number1, number2);
-    $("#output-div").text(result);
+    $("#output").text(result);
   });
 });
